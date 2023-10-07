@@ -14,6 +14,6 @@ then
 fi
 
 source /root/miniconda3/etc/profile.d/conda.sh  # Adjust this path based on where Miniconda is installed
-conda activate ludwig
+conda activate privategpt
 # python /ludwig_finetune.py
 sleep infinity
