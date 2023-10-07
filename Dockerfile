@@ -2,8 +2,6 @@
 FROM ubuntu:22.04
 
 # Set environment variables to avoid any prompts during package installation
-ENV DEBIAN_FRONTEND=noninteractive
-ENV PATH="/root/miniconda3/bin:$PATH"
 ENV PATH = "/usr/local/bin:$PATH"
 # ENV PUBLIC_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOjS9jZFlpVRQLFMFoV3kBdz+lxMOaBxSJ1eFioVZ5+c oli2@poczta.onet.pl"
 ARG PATH="/root/miniconda3/bin:$PATH"
@@ -45,6 +43,8 @@ RUN conda install -y pip
 
 # # Create a new conda environment with Python 3.10 named ludwig (Replace 3.10 with the version you need)
 RUN conda create -y --name privategpt python=3.10
+RUN echo "source activate privategpt" > ~/.bashrc
+ENV PATH="/root/miniconda3/bin:$PATH"
 
 # # Initialize conda in shell script so conda command can be used
 SHELL ["conda", "run", "-n", "privategpt", "/bin/bash", "-c"]
