@@ -10,7 +10,7 @@ ARG PATH="/root/miniconda3/bin:$PATH"
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y \
     build-essential \
-    openssl \
+    openssh-server \
     software-properties-common \
     wget \
     bzip2 \
