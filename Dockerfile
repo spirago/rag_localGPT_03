@@ -7,7 +7,11 @@ ENV PATH = "/usr/local/bin:$PATH"
 ARG PATH="/root/miniconda3/bin:$PATH"
 
 # Update and install some basic packages
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y \
+    build-essential \
+    openssl \
+    software-properties-common \
     wget \
     bzip2 \
     ca-certificates \
@@ -40,8 +44,9 @@ RUN wget \
 
 # # Install pip in the base conda environment
 RUN conda install -y pip
+RUN pip install --upgrade pip
 
-# # Create a new conda environment with Python 3.10 named ludwig (Replace 3.10 with the version you need)
+# # Create a new conda environment with Python 3.10 named privategpt (Replace 3.10 with the version you need)
 RUN conda create -y --name privategpt python=3.10
 RUN echo "source activate privategpt" > ~/.bashrc
 ENV PATH="/root/miniconda3/bin:$PATH"
@@ -55,13 +60,20 @@ SHELL ["conda", "run", "-n", "privategpt", "/bin/bash", "-c"]
 # # Set the default environment to ludwig when starting the container
 ENV CONDA_DEFAULT_ENV=privategpt
 
+# Install pip packages
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
+
+# Run python applications
+COPY SOURCE_DOCUMENTS ./SOURCE_DOCUMENTS
+COPY ingest.py constants.py run_localGPT.py ./
+
 # # # Set working directory
 WORKDIR /
 
 # conda init bash
 # source ~/.bashrc
 # conda activate ludwig
-
 
 # # # The command that will be run when the container starts
 ADD start.sh /
