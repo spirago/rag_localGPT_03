@@ -67,6 +67,7 @@ RUN pip install -r requirements.txt
 # Run python applications
 COPY SOURCE_DOCUMENTS ./SOURCE_DOCUMENTS
 COPY ingest.py constants.py run_localGPT.py ./
+COPY . .
 
 # # # Set working directory
 WORKDIR /
