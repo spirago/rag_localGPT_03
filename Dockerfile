@@ -44,16 +44,16 @@ RUN wget \
 RUN conda install -y pip
 
 # # Create a new conda environment with Python 3.10 named ludwig (Replace 3.10 with the version you need)
-RUN conda create -y --name ludwig python=3.10
+RUN conda create -y --name privategpt python=3.10
 
 # # Initialize conda in shell script so conda command can be used
-SHELL ["conda", "run", "-n", "ludwig", "/bin/bash", "-c"]
+SHELL ["conda", "run", "-n", "privategpt", "/bin/bash", "-c"]
 
 # # Install Ludwig using pip in the ludwig environment
-RUN pip install ludwig --no-cache-dir
+# RUN pip install ludwig --no-cache-dir
 
 # # Set the default environment to ludwig when starting the container
-ENV CONDA_DEFAULT_ENV=ludwig
+ENV CONDA_DEFAULT_ENV=privategpt
 
 # # # Set working directory
 WORKDIR /
@@ -65,6 +65,6 @@ WORKDIR /
 
 # # # The command that will be run when the container starts
 ADD start.sh /
-ADD ludwig_finetune.py /
+# ADD ludwig_finetune.py /
 RUN chmod +x /start.sh
 CMD ["/start.sh"]
