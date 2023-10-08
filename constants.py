@@ -144,8 +144,8 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate
 # MODEL_BASENAME = "model.safetensors"
 # MODEL_ID = "TheBloke/vicuna-13B-v1.5-GPTQ"
 # MODEL_BASENAME = "model.safetensors"
-MODEL_ID = "TheBloke/Nous-Hermes-13B-GPTQ"
-MODEL_BASENAME = "model.safetensors"
+# MODEL_ID = "TheBloke/Nous-Hermes-13B-GPTQ"
+# MODEL_BASENAME = "model.safetensors"
 # MODEL_ID = "TheBloke/WizardLM-13B-V1.2-GPTQ"
 # MODEL_BASENAME = "gptq_model-4bit-128g.safetensors
 
@@ -170,8 +170,8 @@ MODEL_BASENAME = "model.safetensors"
 #### (FOR GGML) (Quantized cpu+gpu+mps) models - check if they support llama.cpp
 ####
 
-# MODEL_ID = "TheBloke/wizard-vicuna-13B-GGML"
-# MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q4_0.bin"
+MODEL_ID = "TheBloke/wizard-vicuna-13B-GGML"
+MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q4_0.bin"
 # MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q6_K.bin"
 # MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q2_K.bin"
 # MODEL_ID = "TheBloke/orca_mini_3B-GGML"
