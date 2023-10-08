@@ -16,5 +16,5 @@ fi
 source /root/miniconda3/etc/profile.d/conda.sh  # Adjust this path based on where Miniconda is installed
 conda activate privategpt
 # python ingest.py (--device_type cpu)
-# python run_localGPT.py (--device_type cpu)
+# python run_localGPT.py (--device_type cpu / --show_sources)
 sleep infinity
