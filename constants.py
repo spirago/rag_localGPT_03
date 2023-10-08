@@ -140,8 +140,8 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate
 ##### 24GB VRAM Graphics Cards (RTX 3090 - RTX 4090 (35% Faster) - RTX A5000 - RTX A5500) #####
 
 ### 13b GPTQ Models for 24GB GPUs (*** With best embedding model: hkunlp/instructor-xl ***)
-# MODEL_ID = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
-# MODEL_BASENAME = "model.safetensors"
+MODEL_ID = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
+MODEL_BASENAME = "model.safetensors"
 # MODEL_ID = "TheBloke/vicuna-13B-v1.5-GPTQ"
 # MODEL_BASENAME = "model.safetensors"
 # MODEL_ID = "TheBloke/Nous-Hermes-13B-GPTQ"
@@ -170,8 +170,8 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate
 #### (FOR GGML) (Quantized cpu+gpu+mps) models - check if they support llama.cpp
 ####
 
-MODEL_ID = "TheBloke/wizard-vicuna-13B-GGML"
-MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q4_0.bin"
+# MODEL_ID = "TheBloke/wizard-vicuna-13B-GGML"
+# MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q4_0.bin"
 # MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q6_K.bin"
 # MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q2_K.bin"
 # MODEL_ID = "TheBloke/orca_mini_3B-GGML"
