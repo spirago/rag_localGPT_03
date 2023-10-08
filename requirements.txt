@@ -1,5 +1,6 @@
 # Natural Language Processing
 langchain==0.0.267
+llama-cpp-python
 chromadb==0.4.6
 pdfminer.six==20221105
 InstructorEmbedding
