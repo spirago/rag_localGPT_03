@@ -141,7 +141,7 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate
 
 ### 13b GPTQ Models for 24GB GPUs (*** With best embedding model: hkunlp/instructor-xl ***)
 MODEL_ID = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
-MODEL_BASENAME = "Wizard-Vicuna-13B-Uncensored-GPTQ-4bit-128g.compat.no-act-order.safetensors"
+MODEL_BASENAME = "model.safetensors"
 # MODEL_ID = "TheBloke/vicuna-13B-v1.5-GPTQ"
 # MODEL_BASENAME = "model.safetensors"
 # MODEL_ID = "TheBloke/Nous-Hermes-13B-GPTQ"
