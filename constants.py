@@ -140,10 +140,10 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-xl" # Uses 5 GB of VRAM (Most Accurate
 ##### 24GB VRAM Graphics Cards (RTX 3090 - RTX 4090 (35% Faster) - RTX A5000 - RTX A5500) #####
 
 ### 13b GPTQ Models for 24GB GPUs (*** With best embedding model: hkunlp/instructor-xl ***)
-MODEL_ID = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
-MODEL_BASENAME = "model.safetensors"
-# MODEL_ID = "TheBloke/vicuna-13B-v1.5-GPTQ"
+# MODEL_ID = "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ"
 # MODEL_BASENAME = "model.safetensors"
+MODEL_ID = "TheBloke/vicuna-13B-v1.5-GPTQ"
+MODEL_BASENAME = "model.safetensors"
 # MODEL_ID = "TheBloke/Nous-Hermes-13B-GPTQ"
 # MODEL_BASENAME = "nous-hermes-13b-GPTQ-4bit-128g.no-act.order"
 # MODEL_ID = "TheBloke/WizardLM-13B-V1.2-GPTQ"
