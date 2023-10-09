@@ -16,6 +16,7 @@ fi
 source /root/miniconda3/etc/profile.d/conda.sh  # Adjust this path based on where Miniconda is installed
 conda activate privategpt
 
+# see ISSUES -> README.md
 pip uninstall -y llama-cpp-python
 set LLAMA_CUBLAS=1
 set CMAKE_ARGS=-DLLAMA_CUBLAS=on
