@@ -63,7 +63,8 @@ ENV CONDA_DEFAULT_ENV=privategpt
 
 # Install pip packages
 COPY ./requirements.txt .
-RUN pip install -r requirements.txt
+# RUN pip install -r requirements.txt
+RUN CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install --timeout 100 -r requirements.txt llama-cpp-python==0.1.83
 
 # Run python applications
 COPY SOURCE_DOCUMENTS ./SOURCE_DOCUMENTS
